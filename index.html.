@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NOVA SKILLS ACADEMY | Académie des compétences numériques</title>
+
+<meta name="description" content="NOVA SKILLS ACADEMY - Formations pratiques en intelligence artificielle, création de contenu, marketing digital et technologies numériques.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#061b3a;
+    color:#fff;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1150px;
+    margin:auto;
+}
+
+/* HEADER */
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#071b38;
+    border-bottom:1px solid rgba(255,255,255,.12);
+}
+
+.navbar{
+    min-height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:20px;
+    font-weight:800;
+}
+
+.logo-box{
+    width:48px;
+    height:48px;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#20c9ff,#2878ff);
+    font-size:25px;
+    font-weight:900;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+    align-items:center;
+}
+
+nav a{
+    color:#d9e7ff;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#28d5ff;
+}
+
+.menu-btn{
+    display:none;
+    font-size:30px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    min-height:calc(100vh - 78px);
+    display:flex;
+    align-items:center;
+    background:
+    radial-gradient(circle at 80% 20%,rgba(21,194,255,.22),transparent 35%),
+    linear-gradient(135deg,#061735,#092f65);
+    padding:70px 0;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.badge{
+    display:inline-block;
+    padding:12px 20px;
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:30px;
+    background:rgba(255,255,255,.09);
+    color:#dff8ff;
+    margin-bottom:25px;
+    font-weight:700;
+}
+
+.hero h1{
+    font-size:clamp(45px,8vw,82px);
+    line-height:1.02;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:#29d2ff;
+}
+
+.hero p{
+    color:#d5e4f7;
+    font-size:20px;
+    max-width:760px;
+    margin-bottom:35px;
+}
+
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.btn{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    padding:16px 27px;
+    border-radius:15px;
+    font-weight:800;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#28c9f5;
+    color:#03152d;
+}
+
+.btn-secondary{
+    border:1px solid rgba(255,255,255,.35);
+    background:rgba(255,255,255,.05);
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* SECTIONS */
+section{
+    padding:85px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+.section-title span{
+    color:#29d2ff;
+}
+
+.section-title p{
+    color:#afc5df;
+}
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.card{
+    padding:28px;
+    border-radius:22px;
+    background:linear-gradient(145deg,#0c315d,#09264c);
+    border:1px solid rgba(255,255,255,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#26cdf9;
+}
+
+.icon{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    margin-bottom:10px;
+    font-size:21px;
+}
+
+.card p{
+    color:#b9cce2;
+}
+
+/* ABOUT */
+.about{
+    background:#071f43;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+    align-items:center;
+}
+
+.about-box{
+    padding:35px;
+    border-radius:25px;
+    background:linear-gradient(145deg,#103967,#08274e);
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.about-box h3{
+    font-size:30px;
+    margin-bottom:18px;
+}
+
+.about-box p{
+    color:#c1d2e7;
+    margin-bottom:20px;
+}
+
+.check{
+    margin:12px 0;
+    color:#dcecff;
+}
+
+.check span{
+    color:#29d2ff;
+    font-weight:bold;
+}
+
+/* CTA */
+.cta{
+    text-align:center;
+    background:
+    radial-gradient(circle at center,rgba(34,207,255,.2),transparent 50%),
+    #082653;
+}
+
+.cta h2{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.cta p{
+    color:#c5d7eb;
+    max-width:700px;
+    margin:0 auto 30px;
+}
+
+/* CONTACT */
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.contact-card{
+    padding:30px;
+    border-radius:22px;
+    background:#0a2850;
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.contact-card h3{
+    margin-bottom:15px;
+}
+
+.contact-card p{
+    color:#c4d5e8;
+    margin:8px 0;
+}
+
+/* FOOTER */
+footer{
+    padding:35px 0;
+    background:#04142c;
+    text-align:center;
+    color:#9db4d0;
+}
+
+footer strong{
+    color:white;
+}
+
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:999;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#25D366;
+    color:white;
+    font-size:28px;
+    box-shadow:0 8px 25px rgba(0,0,0,.35);
+}
+
+/* RESPONSIVE */
+@media(max-width:850px){
+
+    nav{
+        display:none;
+        position:absolute;
+        top:78px;
+        left:0;
+        width:100%;
+        background:#071b38;
+        padding:25px;
+        flex-direction:column;
+        border-bottom:1px solid rgba(255,255,255,.1);
+    }
+
+    nav.active{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .cards{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:550px){
+
+    .navbar{
+        min-height:70px;
+    }
+
+    .logo{
+        font-size:16px;
+    }
+
+    .logo-box{
+        width:43px;
+        height:43px;
+    }
+
+    .hero{
+        padding:55px 0;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    section{
+        padding:65px 0;
+    }
+
+    .section-title h2{
+        font-size:34px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .cta h2{
+        font-size:34px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container navbar">
+
+<a href="#accueil" class="logo">
+<div class="logo-box">N</div>
+<span>NOVA SKILLS ACADEMY</span>
+</a>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<nav id="menu">
+<a href="#accueil">Accueil</a>
+<a href="#formations">Formations</a>
+<a href="#apropos">À propos</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</div>
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="accueil">
+<div class="container">
+<div class="hero-content">
+
+<div class="badge">
+🎓 Académie des compétences numériques
+</div>
+
+<h1>
+Apprendre aujourd'hui.<br>
+<span>Créer demain.</span>
+</h1>
+
+<p>
+Développez des compétences pratiques en intelligence artificielle,
+création de contenu, marketing digital et technologies numériques.
+</p>
+
+<div class="buttons">
+<a href="#contact" class="btn btn-primary">
+🚀 S'inscrire maintenant
+</a>
+
+<a href="https://wa.me/243819024857" class="btn btn-secondary">
+💬 WhatsApp
+</a>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- FORMATIONS -->
+<section id="formations">
+<div class="container">
+
+<div class="section-title">
+<h2>Nos <span>formations</span></h2>
+<p>Des compétences pratiques pour construire votre avenir numérique.</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">🤖</div>
+<h3>Intelligence artificielle</h3>
+<p>
+Apprenez à utiliser les outils IA modernes pour travailler,
+créer et développer vos projets.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🎬</div>
+<h3>Création de contenu</h3>
+<p>
+Créez des vidéos, images et contenus professionnels
+pour les réseaux sociaux.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📣</div>
+<h3>Marketing digital</h3>
+<p>
+Développez votre visibilité et apprenez à attirer
+des clients grâce au numérique.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">💻</div>
+<h3>Technologies numériques</h3>
+<p>
+Développez vos compétences informatiques et
+maîtrisez les outils numériques essentiels.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- A PROPOS -->
+<section class="about" id="apropos">
+<div class="container">
+
+<div class="section-title">
+<h2>Pourquoi <span>NOVA SKILLS ?</span></h2>
+<p>Apprendre. Pratiquer. Créer. Réussir.</p>
+</div>
+
+<div class="about-grid">
+
+<div class="about-box">
+<h3>Une formation orientée pratique</h3>
+
+<p>
+Notre objectif est de permettre aux apprenants de développer
+des compétences directement utilisables dans leurs projets,
+leurs activités professionnelles et leurs entreprises.
+</p>
+
+<div class="check">
+<span>✓</span> Formations accessibles
+</div>
+
+<div class="check">
+<span>✓</span> Approche pratique
+</div>
+
+<div class="check">
+<span>✓</span> Outils numériques modernes
+</div>
+
+<div class="check">
+<span>✓</span> Accompagnement des apprenants
+</div>
+</div>
+
+
+<div class="about-box">
+<h3>Notre vision</h3>
+
+<p>
+Préparer une nouvelle génération capable d'utiliser
+la technologie et l'intelligence artificielle pour créer
+des opportunités et résoudre des problèmes.
+</p>
+
+<p>
+<strong>« Apprendre aujourd'hui. Créer demain. »</strong>
+</p>
+
+<a href="#contact" class="btn btn-primary">
+Rejoindre l'académie
+</a>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta">
+<div class="container">
+
+<h2>Votre avenir numérique commence ici.</h2>
+
+<p>
+Ne vous contentez pas de regarder le monde numérique évoluer.
+Apprenez à en devenir un acteur.
+</p>
+
+<div class="buttons" style="justify-content:center;">
+<a href="#contact" class="btn btn-primary">
+🚀 Commencer maintenant
+</a>
+
+<a href="https://wa.me/243819024857" class="btn btn-secondary">
+💬 Nous contacter
+</a>
+</div>
+
+</div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="container">
+
+<div class="section-title">
+<h2>Contactez <span>NOVA SKILLS</span></h2>
+<p>Nous sommes disponibles pour répondre à vos questions.</p>
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+<h3>📱 Téléphone</h3>
+<p>+243 842 011 624</p>
+</div>
+
+<div class="contact-card">
+<h3>💬 WhatsApp</h3>
+<p>+243 819 024 857</p>
+</div>
+
+</div>
+
+<div style="text-align:center;margin-top:30px;">
+
+<a href="https://wa.me/243819024857?text=Bonjour%20NOVA%20SKILLS%20ACADEMY%2C%20je%20souhaite%20m%27inscrire%20%C3%A0%20une%20formation."
+class="btn btn-primary">
+💬 Écrire sur WhatsApp
+</a>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+<div class="container">
+
+<p>
+<strong>NOVA SKILLS ACADEMY</strong>
+</p>
+
+<p>
+Académie des compétences numériques
+</p>
+
+<p style="margin-top:10px;">
+© 2026 NOVA SKILLS ACADEMY — Tous droits réservés.
+</p>
+
+</div>
+</footer>
+
+
+<!-- WHATSAPP -->
+<a class="whatsapp"
+href="https://wa.me/243819024857"
+aria-label="WhatsApp">
+💬
+</a>
+
+
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+
+document.querySelectorAll("nav a").forEach(function(link){
+    link.addEventListener("click",function(){
+        document.getElementById("menu").classList.remove("active");
+    });
+});
+</script>
+
+</body>
+  </html>
