@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NOVA SKILLS ACADEMY — Formations pratiques en intelligence artificielle, création de contenu, marketing digital et compétences numériques.">
+<title>NOVA SKILLS ACADEMY | Apprendre aujourd'hui. Créer demain.</title>
+<style>
+:root{--navy:#07152f;--blue:#1769ff;--cyan:#35d6ff;--white:#fff;--muted:#aab8d1;--bg:#f6f8fc;--dark:#08142e;--card:#fff;--shadow:0 18px 50px rgba(7,21,47,.10);--radius:22px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--dark);background:var(--bg);line-height:1.6}
+a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(7,21,47,.94);backdrop-filter:blur(14px);color:#fff}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-weight:900;letter-spacing:.6px;font-size:1.05rem;display:flex;align-items:center;gap:10px}
+.logo-mark{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--cyan),var(--blue));display:grid;place-items:center;font-weight:900}
+nav{display:flex;gap:24px;font-size:.92rem;color:#dce6fb}nav a:hover{color:var(--cyan)}
+.menu{display:none;border:0;background:transparent;color:#fff;font-size:1.7rem}
+.hero{background:radial-gradient(circle at 80% 20%,rgba(53,214,255,.22),transparent 30%),linear-gradient(135deg,#07152f,#0b2a66 65%,#0c5eea);color:#fff;padding:88px 0 80px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:50px}
+.eyebrow{display:inline-flex;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);padding:7px 12px;border-radius:999px;color:#dff9ff;font-size:.82rem;font-weight:700;margin-bottom:18px}
+h1{font-size:clamp(2.5rem,6vw,4.8rem);line-height:1.02;letter-spacing:-2px;margin-bottom:20px}
+h1 span{color:var(--cyan)}
+.hero p{font-size:1.08rem;color:#d9e5fa;max-width:650px;margin-bottom:30px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border-radius:13px;font-weight:800;border:1px solid transparent;transition:.2s}.btn-primary{background:var(--cyan);color:#06132d}.btn-primary:hover{transform:translateY(-2px)}.btn-light{border-color:rgba(255,255,255,.3);color:#fff}.btn-light:hover{background:#fff;color:#07152f}
+.hero-card{background:linear-gradient(160deg,rgba(255,255,255,.15),rgba(255,255,255,.05));border:1px solid rgba(255,255,255,.18);border-radius:28px;padding:28px;box-shadow:0 30px 80px rgba(0,0,0,.25)}
+.hero-card .screen{background:#fff;border-radius:18px;padding:20px;color:var(--dark);box-shadow:0 18px 50px rgba(0,0,0,.18)}
+.screen-top{display:flex;gap:6px;margin-bottom:20px}.dot{width:9px;height:9px;border-radius:50%;background:#d9e1ee}.screen h3{font-size:1.35rem;margin-bottom:6px}.progress{height:9px;background:#e9eef7;border-radius:99px;overflow:hidden;margin:14px 0}.progress i{display:block;width:72%;height:100%;background:linear-gradient(90deg,var(--blue),var(--cyan));border-radius:99px}.mini{font-size:.82rem;color:#687792}
+section{padding:84px 0}.section-head{text-align:center;max-width:720px;margin:0 auto 42px}.section-head .eyebrow{background:#e8f4ff;color:#0b5fe8;border:0}.section-head h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:10px 0 12px}.section-head p{color:#63718a}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:var(--card);border-radius:var(--radius);padding:25px;box-shadow:var(--shadow);border:1px solid #e8edf5;transition:.25s}.card:hover{transform:translateY(-5px);box-shadow:0 24px 60px rgba(7,21,47,.14)}.icon{width:48px;height:48px;border-radius:14px;background:#eaf3ff;color:#1263e9;display:grid;place-items:center;font-weight:900;margin-bottom:17px}.card h3{font-size:1.05rem;margin-bottom:8px}.card p{color:#69778e;font-size:.91rem}
+.why{background:#07152f;color:#fff}.why .section-head p{color:#b6c5df}.why .section-head .eyebrow{background:rgba(53,214,255,.12);color:var(--cyan)}.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.why .card{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.1);box-shadow:none}.why .card p{color:#b6c5df}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.step{display:flex;gap:16px}.num{min-width:42px;height:42px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:900}
+.contact{background:linear-gradient(135deg,#0a2450,#0b64ec);color:#fff}.contact-box{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}.contact p{color:#d8e5fb;margin:12px 0 24px}.contact-info{display:grid;gap:12px}.contact-item{padding:17px 18px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);border-radius:15px}.contact-item b{display:block}.form{background:#fff;padding:25px;border-radius:22px;color:var(--dark);box-shadow:0 25px 70px rgba(0,0,0,.2)}label{display:block;font-size:.82rem;font-weight:800;margin:0 0 6px}input,select,textarea{width:100%;padding:12px 13px;border:1px solid #d9e1ed;border-radius:11px;margin-bottom:14px;font:inherit}textarea{min-height:100px;resize:vertical}.form .btn{width:100%;cursor:pointer}
+footer{background:#050f24;color:#9fb0ce;padding:30px 0}.footer{display:flex;justify-content:space-between;gap:20px;align-items:center}.footer strong{color:#fff}.social{display:flex;gap:14px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.hero-grid,.contact-box{grid-template-columns:1fr}.hero{padding-top:60px}.why-grid,.steps{grid-template-columns:1fr 1fr}nav{display:none}.menu{display:block}}
+@media(max-width:600px){.nav{height:68px}.grid,.why-grid,.steps{grid-template-columns:1fr}.hero{padding:55px 0 60px}section{padding:65px 0}h1{letter-spacing:-1px}.actions .btn{width:100%}.footer{flex-direction:column;text-align:center}}
+</style>
+</head>
+<body>
+<header>
+<div class="container nav">
+<a class="logo" href="#accueil"><span class="logo-mark">N</span>NOVA SKILLS ACADEMY</a>
+<nav><a href="#accueil">Accueil</a><a href="#formations">Formations</a><a href="#apropos">À propos</a><a href="#inscription">Inscription</a><a href="#contact">Contact</a></nav>
+<button class="menu" aria-label="Menu">☰</button>
+</div>
+</header>
+
+<main>
+<section class="hero" id="accueil">
+<div class="container hero-grid">
+<div>
+<div class="eyebrow">🎓 Académie des compétences numériques</div>
+<h1>Apprendre aujourd’hui.<br><span>Créer demain.</span></h1>
+<p>Développez des compétences pratiques en intelligence artificielle, création de contenu, marketing digital et technologies numériques.</p>
+<div class="actions">
+<a class="btn btn-primary" href="#inscription">🚀 S’inscrire maintenant</a>
+<a class="btn btn-light" href="https://wa.me/243819024857?text=Bonjour%20NOVA%20SKILLS%20ACADEMY%2C%20je%20souhaite%20avoir%20plus%20d'informations%20sur%20les%20formations." target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+</div>
+<div class="hero-card">
+<div class="screen">
+<div class="screen-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+<div class="mini">PARCOURS NOVA</div><h3>Maîtrisez les compétences de demain.</h3>
+<p class="mini">Des cours orientés pratique, accessibles aux débutants.</p>
+<div class="progress"><i></i></div><div class="mini">8 modules • Apprentissage pratique</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="formations">
+<div class="container">
+<div class="section-head"><div class="eyebrow">NOS FORMATIONS</div><h2>Des compétences pour passer à l’action.</h2><p>Choisissez votre domaine et développez des compétences directement applicables à vos projets.</p></div>
+<div class="grid">
+<article class="card"><div class="icon">AI</div><h3>Intelligence Artificielle</h3><p>Utilisez les outils IA pour apprendre, créer, automatiser et développer vos projets.</p></article>
+<article class="card"><div class="icon">CC</div><h3>Création de contenu</h3><p>Produisez des contenus professionnels pour TikTok, Facebook, YouTube et Instagram.</p></article>
+<article class="card"><div class="icon">MD</div><h3>Marketing digital</h3><p>Construisez votre visibilité et transformez le digital en opportunités.</p></article>
+<article class="card"><div class="icon">RS</div><h3>Réseaux sociaux</h3><p>Apprenez à créer, développer et gérer une présence professionnelle en ligne.</p></article>
+<article class="card"><div class="icon">YT</div><h3>YouTube</h3><p>Chaîne, contenu, stratégie de croissance et bases de la monétisation.</p></article>
+<article class="card"><div class="icon">TK</div><h3>TikTok</h3><p>Créez des vidéos engageantes et développez une audience durable.</p></article>
+<article class="card"><div class="icon">DG</div><h3>Design & visuels</h3><p>Créez des affiches, visuels publicitaires et contenus attractifs.</p></article>
+<article class="card"><div class="icon">BD</div><h3>Business digital</h3><p>Transformez vos compétences numériques en activité et en opportunités.</p></article>
+</div>
+</div>
+</section>
+
+<section class="why" id="apropos">
+<div class="container">
+<div class="section-head"><div class="eyebrow">POURQUOI NOVA ?</div><h2>Une formation pensée pour la pratique.</h2><p>Notre ambition est de rendre les compétences numériques plus accessibles et utiles.</p></div>
+<div class="why-grid">
+<div class="card"><div class="icon">✓</div><h3>Pratique</h3><p>Apprenez en réalisant des exercices et projets concrets.</p></div>
+<div class="card"><div class="icon">★</div><h3>Accompagnement</h3><p>Progressez avec une approche claire et un accompagnement adapté.</p></div>
+<div class="card"><div class="icon">∞</div><h3>Évolution</h3><p>Développez des compétences qui évoluent avec les outils numériques.</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-head"><div class="eyebrow">COMMENT ÇA MARCHE ?</div><h2>Commencez en 3 étapes.</h2></div>
+<div class="steps">
+<div class="step"><div class="num">1</div><div><h3>Choisissez</h3><p>Découvrez les formations et choisissez le parcours qui vous correspond.</p></div></div>
+<div class="step"><div class="num">2</div><div><h3>Inscrivez-vous</h3><p>Envoyez vos informations et échangez avec notre équipe.</p></div></div>
+<div class="step"><div class="num">3</div><div><h3>Apprenez & créez</h3><p>Commencez votre formation et mettez immédiatement vos compétences en pratique.</p></div></div>
+</div>
+</div>
+</section>
+
+<section class="contact" id="inscription">
+<div class="container contact-box">
+<div>
+<div class="eyebrow">INSCRIPTION</div><h2>Prêt à développer vos compétences ?</h2>
+<p>Remplissez le formulaire. Votre demande sera préparée pour un contact rapide sur WhatsApp.</p>
+<div class="contact-info">
+<div class="contact-item"><b>📞 Téléphone</b>+243 842 011 624</div>
+<div class="contact-item"><b>💬 WhatsApp</b>+243 819 024 857</div>
+</div>
+</div>
+<form class="form" id="signupForm">
+<label for="name">Nom complet</label><input id="name" required placeholder="Votre nom complet">
+<label for="phone">Téléphone</label><input id="phone" required placeholder="+243 ...">
+<label for="course">Formation</label>
+<select id="course" required><option value="">Choisir une formation</option><option>Intelligence Artificielle</option><option>Création de contenu</option><option>Marketing digital</option><option>Réseaux sociaux</option><option>YouTube</option><option>TikTok</option><option>Design & visuels</option><option>Business digital</option></select>
+<label for="message">Message (facultatif)</label><textarea id="message" placeholder="Votre question..."></textarea>
+<button class="btn btn-primary" type="submit">Envoyer ma demande sur WhatsApp</button>
+</form>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<div class="section-head"><div class="eyebrow">CONTACT</div><h2>Parlons de votre projet.</h2><p>Une question sur une formation ? Contactez directement NOVA SKILLS ACADEMY.</p></div>
+<div class="actions" style="justify-content:center">
+<a class="btn btn-primary" href="https://wa.me/243819024857" target="_blank" rel="noopener">💬 WhatsApp +243 819 024 857</a>
+<a class="btn" style="background:#07152f;color:#fff" href="tel:+243842011624">📞 Appeler +243 842 011 624</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer><div class="container footer"><div>© 2026 <strong>NOVA SKILLS ACADEMY</strong>. Tous droits réservés.</div><div class="social"><span>Formation</span><span>•</span><span>Innovation</span><span>•</span><span>Création</span></div></div></footer>
+
+<script>
+document.querySelector('.menu').addEventListener('click',()=>{const n=document.querySelector('nav');n.style.display=n.style.display==='flex'?'none':'flex';n.style.flexDirection='column';n.style.position='absolute';n.style.top='68px';n.style.right='4%';n.style.background='#07152f';n.style.padding='18px';n.style.borderRadius='14px'});
+document.getElementById('signupForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ const name=document.getElementById('name').value.trim(), phone=document.getElementById('phone').value.trim(), course=document.getElementById('course').value, msg=document.getElementById('message').value.trim();
+ const text=`Bonjour NOVA SKILLS ACADEMY,%0A%0AJe souhaite m'inscrire.%0A%0A👤 Nom : ${encodeURIComponent(name)}%0A📞 Téléphone : ${encodeURIComponent(phone)}%0A🎓 Formation : ${encodeURIComponent(course)}%0A💬 Message : ${encodeURIComponent(msg||'Aucun message')}`;
+ window.open(`https://wa.me/243819024857?text=${text}`,'_blank');
+});
+</script>
+</body>
+</html>
